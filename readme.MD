@@ -1,0 +1,3 @@
+- Arquitectura extensible
+- Principios SOLID
+- Separación de responsabilidades
