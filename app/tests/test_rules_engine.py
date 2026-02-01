@@ -28,3 +28,23 @@ def test_amount_match_rule_exact():
 
     assert result["matched"] is True
     assert result["match_type"] == "amount"
+
+# test negativo
+def test_amount_match_rule_fail():
+    rule = Rule(
+        name="amount match",
+        version=1,
+        priority=1,
+        config={"type": "amount_match", "tolerance": 0.01},
+        active=True
+    )
+
+    engine = RulesEngine([rule])
+
+    invoice = FakeInvoice(amount=100.00)
+    movement = FakeMovement(amount=110.00)
+
+    result = engine.evaluate(invoice, movement)
+
+    assert result["matched"] is False
+
