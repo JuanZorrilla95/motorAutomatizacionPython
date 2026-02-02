@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, Float, DateTime
 from datetime import datetime
 from app.core.database import Base
-#cargado de invoices
+#cargado de invoices/facturas
 class Invoice(Base):
     __tablename__ = "invoices"
 
