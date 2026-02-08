@@ -80,7 +80,7 @@ def run_rules_for_invoice(
 
     rules = db.query(Rule).filter(Rule.active == True).all()
     applied_actions = []
-    results = []
+    # results = []
 
     for rule in rules:
         matched = False
@@ -111,9 +111,9 @@ def run_rules_for_invoice(
                 matched=True
             )
 
-        db.add(run)
+            db.add(run)
 
-        applied_actions.append(rule.action)
+            applied_actions.append(rule.action)
         # if matched:
         #     results.append({
         #         "rule": rule.name,
