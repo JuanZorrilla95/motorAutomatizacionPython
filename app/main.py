@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from app.core.database import Base, engine
-import app.models
+from app.models import rule, invoice, rule_run 
 
 from app.api.routes.imports import router as imports_router
 from app.api.routes.reconciliations import router as reconciliations_router
