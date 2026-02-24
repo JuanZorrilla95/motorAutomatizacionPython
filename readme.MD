@@ -1,6 +1,7 @@
-Producto: motor que basicamente toma un invoice, evalua reglas y decide que hacer con ese invoice
+Producto: motor que toma un invoice, evalua reglas y decide que hacer con ese invoice/factura
 
 Negocio:
+
 Rules = definición
 
 RuleRun = auditoría
@@ -13,7 +14,7 @@ Invoice = estado del negocio
 2. Crear reglas de negocio. POST /rules/config
 
 
-3 .Ejecutar reglas sobre una invoice. POST /rules/run/{invoice_id}
+3. Ejecutar reglas sobre una invoice. POST /rules/run/{invoice_id}
 
 El proyecto tiene:
 - Arquitectura extensible
